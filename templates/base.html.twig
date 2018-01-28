@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}FFA TABLE Example{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
+        {% endblock %}
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        {% block body %}
+            <div id="wrapper">
+                <div id="container">
+                    <div>
+                        <h1><span>FFA Table example</span></h1>
+                    </div>
+                    <div>
+                        <table id="league-table">
+                            <thead>
+                            <tr>
+                                <th>
+                                    <a title="#">#</a>
+                                </th>
+                                <th>
+                                    <a title="Team">Team</a>
+                                </th>
+                                <th>
+                                    <a title="PLD">PLD</a>
+                                </th>
+                                <th>
+                                    <a title="W">W</a>
+                                </th>
+                                <th>
+                                    <a title="D">D</a>
+                                </th>
+                                <th>
+                                    <a title="L">L</a>
+                                </th>
+                                <th>
+                                    <a title="PTS">PTS</a>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="item in items">
+                                    <td>
+                                        ${item.rank}</td>
+                                    <td>
+                                        <img src="//media.sbs.com.au/theworldgame/teams/45x45/9999.png" alt="${item.name}">
+                                        <div class="views-field-club-name">
+                                            ${item.name}
+                                        </div>
+                                    </td>
+                                    <td>
+                                        ${item.total}      </td>
+                                    <td>
+                                        ${item.win}       </td>
+                                    <td>
+                                        ${item.draw}        </td>
+                                    <td>
+                                        ${item.lose}    </td>
+                                    <td>
+                                        ${item.points}        </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
+        {% block javascripts %}
+            <script src="{{ asset('build/js/app.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>

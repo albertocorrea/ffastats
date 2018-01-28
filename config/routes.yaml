@@ -1,0 +1,7 @@
+index:
+    path: /
+    controller: App\Controller\TableController::index
+
+update:
+    path: /update
+    defaults: { _controller: 'App\Controller\TableController::update' }

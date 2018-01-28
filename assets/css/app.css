@@ -1,0 +1,3 @@
+body{font-family:"Lucida Sans Unicode";}
+h1{color:#039;}
+#league-table{font-family:"Lucida Sans Unicode", "Lucida Grande", Sans-Serif;font-size:12px;background:#fff;width:480px;border-collapse:collapse;text-align:left;margin:20px;}#league-table th{font-size:14px;font-weight:normal;color:#039;border-bottom:2px solid #6678b1;padding:10px 8px;}#league-table td{color:#669;padding:9px 8px 0;}#league-table tbody tr:hover td{color:#009;}
