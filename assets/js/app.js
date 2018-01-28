@@ -2,7 +2,7 @@ var app = new Vue({
     delimiters: ['${', '}'],
     el: '#league-table',
     data: {
-        items: null,
+        teams: null,
         timer: ''
     },
     created: function () {
@@ -11,9 +11,10 @@ var app = new Vue({
     },
     methods: {
         fetchData: function () {
+            var league = window.location.pathname.split("/").pop();
             var self = this;
-            $.get( '/update', function( data ) {
-                self.items = data;
+            $.get( '/update/'+league, function( data ) {
+                self.teams = data;
             });
         }
     }

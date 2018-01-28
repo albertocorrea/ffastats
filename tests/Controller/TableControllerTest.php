@@ -16,7 +16,7 @@ class PostControllerTest extends WebTestCase
     {
         $client = static::createClient();
 
-        $client->request('GET', '/update');
+        $client->request('GET', '/update/premier');
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }

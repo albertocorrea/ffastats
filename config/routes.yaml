@@ -3,5 +3,9 @@ index:
     controller: App\Controller\TableController::index
 
 update:
-    path: /update
+    path: /update/{league}
     defaults: { _controller: 'App\Controller\TableController::update' }
+
+league:
+    path: /league/{league}
+    defaults: { _controller: 'App\Controller\TableController::league' }
