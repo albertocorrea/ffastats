@@ -2,7 +2,6 @@ var app = new Vue({
     delimiters: ['${', '}'],
     el: '#league-table',
     data: {
-        currentBranch: 'dev',
         items: null,
         timer: ''
     },
